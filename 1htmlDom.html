@@ -6,11 +6,16 @@
 <body>
 Name:<input id="textInput" type="text" />
 Hello world!
+<span id="nameDiv"></span>
 <script>
-var textInputElement=document.getElementById('textInput');
+var textInputElement=document.getElementById('textInput'),
+nameDivElement=document.getElementById("nameDiv");
+
 textInputElement.addEventListener('keyup',function(){
-	console.log('got keyup event');
+var text=textInputElement.value;
+nameDivElement.innerHTML=text;
 });
+
 </script>
 </body>
 </html>
